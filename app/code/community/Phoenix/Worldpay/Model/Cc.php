@@ -45,8 +45,8 @@ class Phoenix_Worldpay_Model_Cc extends Mage_Payment_Model_Method_Abstract
     protected $_testUrl	= 'https://secure-test.worldpay.com/wcc/purchase';
     protected $_liveUrl	= 'https://secure.worldpay.com/wcc/purchase';
 
-    protected $_testAdminUrl	= 'https://secure-test.worldpay.com/wcc/itransaction';
-    protected $_liveAdminUrl	= 'https://secure.worldpay.com/wcc/itransaction';
+    protected $_testAdminUrl	= 'https://secure-test.worldpay.com/wcc/iadmin';
+    protected $_liveAdminUrl	= 'https://secure.worldpay.com/wcc/iadmin';
 
     protected $_formBlockType = 'worldpay/form';
     protected $_infoBlockType = 'worldpay/info';
@@ -185,8 +185,9 @@ class Phoenix_Worldpay_Model_Cc extends Mage_Payment_Model_Method_Abstract
     /**
      * Refund money
      *
-     * @param   Varien_Object $invoicePayment
-     * @return  Mage_GoogleCheckout_Model_Payment
+     * @param Varien_Object $payment
+     * @param float $amount
+     * @return  Phoenix_Worldpay_Model_Cc
      */
     public function refund(Varien_Object $payment, $amount)
     {
@@ -211,8 +212,10 @@ class Phoenix_Worldpay_Model_Cc extends Mage_Payment_Model_Method_Abstract
 
     /**
      * Capture preatutharized amount
+     *
      * @param Varien_Object $payment
-     * @param <type> $amount
+     * @param float $amount
+     * @return $this
      */
 	public function capture(Varien_Object $payment, $amount)
 	{
@@ -311,7 +314,7 @@ class Phoenix_Worldpay_Model_Cc extends Mage_Payment_Model_Method_Abstract
     /**
      * Log debug data to file
      *
-     * Prior Magento 1.4.1 this method doesn't exists. So it is mainly to provide
+     * Prior Magento 1.4.1 this method doesn't exist. So it is mainly to provide
      * BC.
      *
      * @param mixed $debugData
