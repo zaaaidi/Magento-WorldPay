@@ -162,8 +162,8 @@ class Phoenix_Worldpay_ProcessingController extends Mage_Core_Controller_Front_A
             $request = $this->getRequest()->getServer();
             $remoteAddr = $request['REMOTE_ADDR'];
         }
-        if ((substr($remoteAddr, 0, 11) != '155.136.16.') ||
-            preg_match('/\.worldpay\.com$/', gethostbyaddr($remoteAddr))) {
+        if ((substr($remoteAddr, 0, 11) != '155.136.16.') &&
+            !preg_match('/\.worldpay\.com$/', gethostbyaddr($remoteAddr))) {
             Mage::throwException('IP can\'t be validated as WorldPay-IP.');
         }
 
