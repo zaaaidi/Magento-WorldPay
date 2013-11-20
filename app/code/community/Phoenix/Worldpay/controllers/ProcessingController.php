@@ -163,7 +163,7 @@ class Phoenix_Worldpay_ProcessingController extends Mage_Core_Controller_Front_A
             $remoteAddr = $request['REMOTE_ADDR'];
         }
         if (!preg_match('/\.worldpay\.com$/', gethostbyaddr($remoteAddr))) {
-            Mage::throwException('`Domain can\'t be validated as WorldPay-Domain.');
+            Mage::throwException('Domain can\'t be validated as WorldPay-Domain.');
         }
 
         // get request variables
