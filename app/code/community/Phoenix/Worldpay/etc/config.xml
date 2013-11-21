@@ -121,12 +121,13 @@
 		</worldpay>
 	</phoenix>
 	<default>
-        <payment>        
+        <payment>
             <worldpay_cc>
                 <active>0</active>
                 <model>worldpay/cc</model>
                 <order_status>1</order_status>
                 <title>Credit Card (Worldpay)</title>
+                <desc>Your purchase from Magento</desc>
                 <allowspecific>0</allowspecific>
                 <use_store_currency>0</use_store_currency>
                 <request_type>authorize</request_type>
@@ -137,5 +138,5 @@
                 <signature_params>amount:currency:instId:cartId:authMode:email</signature_params>
             </worldpay_cc>
         </payment>
-    </default> 
+    </default>
 </config>

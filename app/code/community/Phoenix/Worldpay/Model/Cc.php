@@ -128,7 +128,7 @@ class Phoenix_Worldpay_Model_Cc extends Mage_Payment_Model_Method_Abstract
 	    				'amount'		=>	$price,
     					'currency'		=>	$currency,
     					'hideCurrency'	=>	'true',
-    					'desc'			=>	Mage::helper('worldpay')->__('Your purchase at') . ' ' . Mage::app()->getStore()->getName(),
+    					'desc'			=>	$this->getConfigData('desc'),
 						'name'			=>	Mage::helper('core')->removeAccents($billing->getFirstname().' '.$billing->getLastname()),
 						'address'		=>	Mage::helper('core')->removeAccents($billing->getStreet(-1)).'&#10;'.Mage::helper('core')->removeAccents($billing->getCity()),
 						'postcode'		=>	$billing->getPostcode() ,
