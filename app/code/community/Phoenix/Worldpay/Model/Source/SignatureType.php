@@ -14,7 +14,7 @@
  *
  * @category   Phoenix
  * @package    Phoenix_Worldpay
- * @copyright  Copyright (c) 2008 Phoenix Medien GmbH & Co. KG (http://www.phoenix-medien.de)
+ * @copyright  Copyright (c) 2008-2017 Phoenix Media GmbH & Co. KG (http://www.phoenix-media.eu)
  */
 
 class Phoenix_Worldpay_Model_Source_SignatureType

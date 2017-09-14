@@ -14,7 +14,7 @@
  *
  * @category   Phoenix
  * @package    Phoenix_Worldpay
- * @copyright  Copyright (c) 2010 Phoenix Medien GmbH & Co. KG (http://www.phoenix-medien.de)
+ * @copyright  Copyright (c) 2008-2017 Phoenix Media GmbH & Co. KG (http://www.phoenix-media.eu)
  */
 
 class Phoenix_Worldpay_ProcessingController extends Mage_Core_Controller_Front_Action
