@@ -21,7 +21,7 @@
 <config>
     <modules>
         <Phoenix_Worldpay>
-            <version>1.4.5</version>
+            <version>1.4.6</version>
         </Phoenix_Worldpay>
     </modules>
     <global>
