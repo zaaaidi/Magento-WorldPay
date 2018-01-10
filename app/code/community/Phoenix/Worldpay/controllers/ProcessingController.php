@@ -50,6 +50,11 @@ class Phoenix_Worldpay_ProcessingController extends Mage_Core_Controller_Front_A
             if (!$order->getId()) {
                 Mage::throwException('No order for processing found');
             }
+
+            if ($order->getPayment() && $order->getPayment()->getTransactionId()) {
+                Mage::throwException('Order was already processed');
+            }
+
             if ($order->getState() != Mage_Sales_Model_Order::STATE_PENDING_PAYMENT) {
                 $order->setState(
                     Mage_Sales_Model_Order::STATE_PENDING_PAYMENT,
