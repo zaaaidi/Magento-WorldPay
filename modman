@@ -12,7 +12,7 @@ app/design/adminhtml/default/default/template/worldpay/*    app/design/adminhtml
 # Module Initializer
 app/etc/modules/Phoenix_Worldpay.xml    app/etc/modules/Phoenix_Worldpay.xml
 
-# Loaale
+# Locale
 app/locale/de_DE/Phoenix_Worldpay.csv    app/locale/de_DE/Phoenix_Worldpay.csv
 app/locale/en_GB/Phoenix_Worldpay.csv    app/locale/en_GB/Phoenix_Worldpay.csv
 app/locale/en_US/Phoenix_Worldpay.csv    app/locale/en_US/Phoenix_Worldpay.csv
